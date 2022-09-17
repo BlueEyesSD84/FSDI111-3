@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <p>Pass by value vs pass by reference</p>
+    <p>Assignment Two answers.</p>
+    <p><b>1.</b> A relational database includes tables containing rows and columns. For example, a typical business order entry database would include a table that describes a customer with columns for name, address, phone number and so forth.</p>
+    <p> - NoSQL databases feature dynamic schema, and allow you to use what’s known as “unstructured data.” This means you can build your application without having to first define the schema. In a relational database(SQL/MySQL), you are required to define your schema before adding data to the database. Not needing a predefined schema makes NoSQL databases much easier to update as data and requirements change</p>
+
+    <p><b>2.</b>  C.R.U.D.(Create,Read,Update,Delete) are the four basic RDBMS operations.  The following are definitions and examples of sql statements. <br><b>Create(Insert function)</b> to insert data into a database.  Create:
+        INSERT INTO menu VALUES (1, 'croissant', 1, '2020-12-16');</br><br><b>Read(Select function)</b> to select information from a database.  READ: 
+        IF OBJECT_ID('cusp_CustomerRead') IS NOT NULL
+        BEGIN 
+            DROP PROC cusp_CustomerRead
+        END 
+        GO
+        CREATE PROC cusp_CustomerRead
+            @CustomerID int
+        AS 
+        BEGIN 
+         
+            SELECT CustomerID, FirstName, LastName, Email, PhoneNumber
+            FROM   Customer  
+            WHERE  (CustomerID = @CustomerID) 
+        END
+        GO</br> <br><b>Update(edit function)</b> is used to Edit information on a database.    UPDATE:
+        UPDATE menu SET item_name = 'chocolate croissant', price = 2.5 WHERE item_id = 1;</br> <br><b>Delete(Delete function)</b> used to remove data from a database.   DELETE:
+        DELETE FROM menu WHERE item_name='bread';</br>
+        <b>SQL Scan Operation:</b> Is used to Scan the entire index or table.  Example: SELECT * FROM Employee.
+    </p>
+    <p> 
+        <b>3.</b> Examples provided above.
+    </p>
+    <p>
+        <b>4.</b> Please see "About" page.
+    </p>
+    <p> 
+        <b>5.</b> Please see Navbar utilizing bootstrap. 
+    </p>
+
+
+{% endblock content %}
