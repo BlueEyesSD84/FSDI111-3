@@ -7,46 +7,57 @@ app = Flask(__name__)
 
 from app.database import data_type
 
+RESPONSE = {
+    "status": "ok"
+}
+
 @app.get("/data_types")
 def index():
-    out = data_type.scan()
-    return out
+    response = RESPONSE
+    response["data_types"] = data_type.scan()
+    return response
 
 @app.get("/data_types/integers")
 def integers():
-    out = data_type.select_by_type(name="Integer")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Integers")
+    return response
 
 @app.get("/data_types/floats")
 def floats():
-    out = data_type.select_by_type(name="Float")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Float")
+    return response
 
 @app.get("/data_types/strings")
 def strings():
-    out = data_type.select_by_type(name="Strings")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Strings")
+    return response
 
 @app.get("/data_types/booleans")
 def bools():
-    out = data_type.select_by_type(name="Boolean")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Boolean")
+    return response
 
 @app.get("/data_types/lists")
 def lists():
-    out = data_type.select_by_type(name="List")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="List")
+    return response
 
 @app.get("/data_types/dictionary")
 def dictionary():
-    out = data_type.select_by_type(name="Dictionary")
-    return out
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Dictionary")
+    return response
 
 @app.get("/data_types/tuple")
 def tuple():
-    out = data_type.select_by_type(name="Tuple")
-    return out
-
+    response = RESPONSE
+    response["data_type"] = data_type.select_by_type(name="Tuple")
+    return response
 
 
 @app.post("/data_types")#to post new records to /
