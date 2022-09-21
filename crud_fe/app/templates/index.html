@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
-INDEX PAGE
+Data Types
 {% endblock title %}
 
 {% block content %}
-<h1>Index home page</h1>
-This is the Index Page
+    <h1>Data Types</h1>
+   {% for dt in data_types %}
+    <a href="{{ url_for (dt['name']) }}">
+        <h3>{{ dt["name"] }}</h3>
+    </a>
+    <ul>
+        <li>{{ dt["description"] }}</li>
+    </ul>
+    {% endfor %}
 {% endblock content %}

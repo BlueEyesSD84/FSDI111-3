@@ -19,16 +19,23 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="{{ url_for('get_index') }}">Home</a>
-                  <a class="nav-link" href="{{ url_for('get_floats_page') }}">index</a>
+                  <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                  <a class="nav-link" href="{{ url_for('integer') }}">Integers</a>
+                  <a class="nav-link" href="{{ url_for('floats') }}">Floats</a>
+                  <a class="nav-link" href="{{ url_for('booleans') }}">Booleans</a>
+                  <a class="nav-link" href="{{ url_for('string') }}">Strings</a>
+                  <a class="nav-link" href="{{ url_for('lists') }}">Lists</a>
+                  <a class="nav-link" href="{{ url_for('dictionary') }}">Dictionary</a>
+                  <a class="nav-link" href="{{ url_for('tuple') }}">Tuple</a>
                   <a class="nav-link" href="{{ url_for('get_data_type_form') }}">new data type entry</a>
+                  <a class="nav-link" href="{{ url_for('table') }}">Table</a>
                 </div>
               </div>
             </div>
           </nav>
               <div class="container">
             {% block content  %}
-            This is a test
             {% endblock content %}
             </div>
             <!-- JavaScript Bundle with Popper -->

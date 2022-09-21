@@ -14,7 +14,7 @@ INSERT INTO data_type (
 ) VALUES (
     "Integer",
     "Integer values",
-    "A data type that stores an integer value"
+    "A data type that stores an integer value."
 );
 
 INSERT INTO data_type (
